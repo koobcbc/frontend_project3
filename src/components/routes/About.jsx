@@ -1,11 +1,11 @@
 import React from 'react';
 import Layout from '../shared/Layout'
 
-const NewOrder = props => {
+const About = props => {
     return(
         <Layout>
-          <h4>New Order</h4>  
+            <h4>About</h4>
         </Layout>
   )}
   
-  export default NewOrder;
+  export default About;
