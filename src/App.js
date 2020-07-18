@@ -1,26 +1,24 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Route, Switch, withRouter } from 'react-router-dom'
+import Home from './components/routes/Home'
+import NewOrder from './components/routes/NewOrder'
+import PastOrders from './components/routes/PastOrders'
+import Order from './components/routes/Order'
+import About from './components/routes/About'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = props => {
+  return(
+  <div className="App">
+    <Switch>
+      <Route exact path='/' component={Home} />
+      <Route path='/new-order' component={NewOrder}/>
+      <Route path='/past-orders/:id' component={Order}/>
+      <Route path='/past-orders' component={PastOrders} />
+      <Route path='/about' component={About}/>
+    </Switch>
+  </div>
+)}
 
-export default App;
+export default withRouter(App);
