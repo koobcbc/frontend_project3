@@ -32,6 +32,7 @@ const PastOrder = (props) => {
     <Layout>
       <h4>PAST ORDERS</h4>
       <ul>{ordersArr}</ul>
+      <p><Link to={`/past-orders/id`}>Order</Link></p>
     </Layout>
     </>
   );

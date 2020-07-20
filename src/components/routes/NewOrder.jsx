@@ -5,7 +5,7 @@ import ItemForm from "../shared/ItemForm";
 import Layout from "../shared/Layout";
 import apiUrl from '../../apiConfig'
 
-const ItemCreate = (props) => {
+const NewOrder = (props) => {
     console.log('ItemCreate props', props)
   const [input, setInput] = useState({ title: "", link: "" });
   const [item, setItem] = useState(null);
@@ -37,14 +37,15 @@ const ItemCreate = (props) => {
 
   return (
     <Layout>
-      <ItemForm
+        <h4>New Order</h4>  
+        <ItemForm
         item={input}
         handleChange={handleChange}
         handleSubmit={handleSubmit}
         cancelPath="/"
-      />
+        />
     </Layout>
   );
 };
 
-export default ItemCreate;
+export default NewOrder;
