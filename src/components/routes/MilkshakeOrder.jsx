@@ -12,7 +12,7 @@ const MilkshakeOrder = (props) =>  {
   useEffect(() => {
     const makeAPICall = async () => {
       try {
-          const response = await axios(`${apiUrl}/milkshake/${props.match.params.id}`)
+          const response = await axios(`${apiUrl}/milkshakes/${props.match.params.id}`)
           console.log('orders - response', response)
           setOrder(response.data.milkshake)
         } catch (err) {

@@ -14,7 +14,7 @@ const IcecreamOrder = (props) =>  {
       try {
           const response = await axios(`${apiUrl}/iceCream/${props.match.params.id}`)
           console.log('orders - response', response)
-          setOrder(response.data.IceCream)
+          setOrder(response.data.iceCream)
         } catch (err) {
           console.error(err)
         }
