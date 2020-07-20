@@ -28,7 +28,6 @@ const PastOrders = (props) => {
   useEffect(() => {
     const makeAPICallMS = async () => {
       try {
-        const response = await axios(`${apiUrl}/ice-cream`);
         const response = await axios(`${apiUrl}/milkshakes`);
         console.log("Orders - useEffect - response", response);
         setMSOrders(response.data.milkshake);
