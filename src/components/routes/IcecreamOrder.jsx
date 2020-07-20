@@ -8,6 +8,7 @@ import apiUrl from '../apiConfig'
 const IcecreamOrder = (props) =>  {
     const [order,setOrder] = useState(null)
     const [isDeleted,setIsDeleted] = useState(false)
+    const [updatedOrder, setUpdatedOrder] = useState({})
 
   useEffect(() => {
     const makeAPICall = async () => {
@@ -41,6 +42,16 @@ const IcecreamOrder = (props) =>  {
         { pathname: '/', state: { msg: 'Item succesfully deleted!' } }
       } />
     }
+
+    let tempOrder = {...order}
+    console.log(tempOrder)
+
+    // const togglePaid = props => {
+    //   order.paid === false
+    //     ? (order.paid = true)
+    //     : (order.paid = false);
+    //   setReceipt(updatedReceipt);
+    // };
 
     return (
         <Layout>
