@@ -13,7 +13,7 @@ const PastOrders = (props) => {
       try {
         const response = await axios(`${apiUrl}/orders`);
         console.log("Orders - useEffect - response", response);
-        setItems(response.data.orders);
+        setOrders(response.data.orders);
       } catch (err) {
         console.error(err);
       }
