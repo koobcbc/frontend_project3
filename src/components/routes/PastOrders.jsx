@@ -38,7 +38,7 @@ const PastOrders = (props) => {
 
   const ICordersArr = ICorders.map((order) => (
     <li key={order._id}>
-      <Link to={`/past-orders/${order._id}`}>Order for {order.name}</Link>
+      <Link to={`/past-orders/icecream/${order._id}`}>Order for {order.name}</Link>
       <h4>Icecream Order</h4>
       <h5>Flavor: {order.flavor}</h5>
       <h5>Toppings: {order.toppings}</h5>
@@ -51,7 +51,7 @@ const PastOrders = (props) => {
 
   const MSordersArr = MSorders.map((order) => (
     <li key={order._id}>
-      <Link to={`/past-orders/${order._id}`}>Order for {order.name}</Link>
+      <Link to={`/past-orders/milkshake/${order._id}`}>Order for {order.name}</Link>
       <h4>Milkshake Order</h4>
       <h5>Flavor: {order.flavor}</h5>
       <h5>Toppings: {order.toppings}</h5>

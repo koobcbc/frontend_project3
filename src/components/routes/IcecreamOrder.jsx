@@ -5,7 +5,7 @@ import axios from 'axios'
 import Layout from '../shared/Layout'
 import apiUrl from '../apiConfig'
 
-const Order = (props) =>  {
+const IcecreamOrder = (props) =>  {
     const [order,setOrder] = useState(null)
     const [isDeleted,setIsDeleted] = useState(false)
 
@@ -14,7 +14,7 @@ const Order = (props) =>  {
       try {
           const response = await axios(`${apiUrl}/iceCream/${props.match.params.id}`)
           console.log('orders - response', response)
-          setOrder(response.data)
+          setOrder(response.data.IceCream)
         } catch (err) {
           console.error(err)
         }
@@ -26,16 +26,6 @@ const Order = (props) =>  {
     const response = await axios(
         {
       url: `${apiUrl}/icecream/${props.match.params.id}`,
-      method: 'DELETE'
-    }
-    )
-    setIsDeleted(true)
-  }
-
-  const destroyMS = async () => {
-    const response = await axios(
-        {
-      url: `${apiUrl}/milkshakes/${props.match.params.id}`,
       method: 'DELETE'
     }
     )
@@ -54,31 +44,18 @@ const Order = (props) =>  {
 
     return (
         <Layout>
-            {order.iceCream ? 
                 <div className="icecreamOrder">
-                    <h4>Order for {order.iceCream.name}</h4> 
-                    <h4>Flavor: {order.iceCream.flavor}</h4>
-                    <h4>Toppings: {order.iceCream.toppings}</h4>
+                    <h4>Order for {order.name}</h4> 
+                    <h4>Flavor: {order.flavor}</h4>
+                    <h4>Toppings: {order.toppings}</h4>
                     <button onClick={destroyIC}>Delete Order</button>
-                    <Link to={`/past-orders/${props.match.params.id}/edit`}>
+                    <Link to={`/past-orders/icecream/${props.match.params.id}/edit`}>
                         <button>Edit Order</button>
                     </Link>
                     <Link to="/past-orders">Back to all orders</Link>
                 </div>
-            :
-                <div className="milkshakeOrder">
-                    <h4>Order for {order.milkshake.name}</h4> 
-                    <h4>Flavor: {order.milkshake.flavor}</h4>
-                    <h4>Toppings: {order.milkshake.toppings}</h4>
-                    <button onClick={destroyMS}>Delete Order</button>
-                    <Link to={`/past-orders/${props.match.params.id}/edit`}>
-                        <button>Edit Order</button>
-                    </Link>
-                    <Link to="/past-orders">Back to all orders</Link>
-                </div>
-            }
         
         </Layout>
     )
 }
-export default Order
+export default IcecreamOrder

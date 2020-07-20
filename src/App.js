@@ -5,7 +5,8 @@ import { Route, Switch, withRouter } from 'react-router-dom'
 import Home from './components/routes/Home'
 import NewOrder from './components/routes/NewOrder'
 import PastOrders from './components/routes/PastOrders'
-import Order from './components/routes/Order'
+import IcecreamOrder from './components/routes/IcecreamOrder'
+import MilkshakeOrder from './components/routes/MilkshakeOrder'
 import About from './components/routes/About'
 
 const App = props => {
@@ -14,7 +15,8 @@ const App = props => {
     <Switch>
       <Route exact path='/' component={Home} />
       <Route path='/new-order' component={NewOrder}/>
-      <Route path='/past-orders/:id' component={Order}/>
+      <Route path='/past-orders/icecream/:id' component={IcecreamOrder}/>
+      <Route path='/past-orders/milkshake/:id' component={MilkshakeOrder}/>
       <Route path='/past-orders' component={PastOrders} />
       <Route path='/about' component={About}/>
     </Switch>
