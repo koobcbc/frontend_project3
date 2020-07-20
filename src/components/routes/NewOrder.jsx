@@ -1,36 +1,63 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-import ItemForm from "../shared/ItemForm";
+import OrderForm from "../shared/OrderForm";
 import Layout from "../shared/Layout";
-import apiUrl from '../../apiConfig'
+import apiUrl from "../apiConfig";
 
 const NewOrder = (props) => {
-    console.log('ItemCreate props', props)
-  const [input, setInput] = useState({ flavor: "", holder: "", toppings: "", size: "", price: "" });
+   // console.log('ItemCreate props', props)
+  const [input, setInput] = useState({ flavor: "", holder: "", toppings: "", size: "", price:"" , paid:false });
   const [item, setItem] = useState(null);
+
+const handleSelect = event => {
+  setInput({
+    ...input,
+    [event.target.name]: event.target.value
+  })
+}
+
+const handleSizeSelect = event =>{
+  if (event.target.value ==='small'){
+    setInput({
+      ...input,
+       size: 'small',
+       price: 5
+     });
+  }else if(event.target.value ==='medium'){
+    setInput({
+      ...input,
+       size: 'medium',
+       price: 6
+     });
+  }else{
+    setInput({
+      ...input,
+       size: 'large',
+       price: 7
+     });
+  }
+}
 
   const handleChange = (event) => {
     console.log("event", event.target.name, event.target.value);
-    setInput({
+     setInput({
       ...input,
       [event.target.name]: event.target.value,
     });
   };
 
   const handleSubmit = (event) => {
-  
     event.preventDefault();
-
-    console.log("handleSubmit");
+    console.log("handleSubmit",input);
     axios({
-      url: `${apiUrl}/orders`,
+      url: `${apiUrl}/icecream`,
       method: "POST",
       data: input,
     })
       .then((res) => {
           setItem({ createdItem: res.data.item })
-          props.history.push('/orders')
+          props.history.push('/icecream')
         })
       .catch(console.error);
   };
@@ -38,10 +65,14 @@ const NewOrder = (props) => {
   return (
     <Layout>
         <h4>New Order</h4>  
-        <ItemForm
-        item={input}
+        <OrderForm
+        order={input}
         handleChange={handleChange}
         handleSubmit={handleSubmit}
+        handleSizeSelect={handleSizeSelect}
+        handleSelect={handleSelect}
+        setInput={setInput}
+        input={input}
         cancelPath="/"
         />
     </Layout>

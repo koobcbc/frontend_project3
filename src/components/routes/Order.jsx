@@ -3,7 +3,7 @@ import { Link, Redirect } from 'react-router-dom'
 import axios from 'axios'
 
 import Layout from '../shared/Layout'
-import apiUrl from '../../apiConfig'
+import apiUrl from  "../apiConfig"
 
 const Order = (props) =>  {
   const [order,setOrder] = useState(null)
@@ -59,4 +59,4 @@ const Order = (props) =>  {
       </Layout>
     )
 }
-export default Item
+export default Order
