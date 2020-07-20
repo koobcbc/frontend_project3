@@ -4,10 +4,10 @@ import axios from 'axios'
 
 import Layout from '../shared/Layout'
 import apiUrl from '../../apiConfig'
-import NewOrder from './NewOrder'
 
 const Order = (props) =>  {
   const [order,setOrder] = useState(null)
+
   const [isDeleted,setIsDeleted] = useState(false)
 
   useEffect(() => {
@@ -16,6 +16,7 @@ const Order = (props) =>  {
           const response = await axios(`${apiUrl}/orders/${props.match.params.id}`)
           console.log('orders - response', response)
           setOrder(response.data.order)
+
         } catch (err) {
           console.error(err)
         }
@@ -35,6 +36,7 @@ const Order = (props) =>  {
   }
 
     if (!order) {
+
       return <p>Loading...</p>
     }
 
@@ -57,5 +59,4 @@ const Order = (props) =>  {
       </Layout>
     )
 }
-
 export default Item
