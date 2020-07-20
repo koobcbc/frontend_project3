@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-import ItemForm from "../shared/ItemForm";
+import OrderForm from "../shared/OrderForm";
 import Layout from "../shared/Layout";
-import apiUrl from '../../apiConfig'
+import apiUrl from '../apiConfig'
 
 const NewOrder = (props) => {
     console.log('ItemCreate props', props)
@@ -38,7 +38,7 @@ const NewOrder = (props) => {
   return (
     <Layout>
         <h4>New Order</h4>  
-        <ItemForm
+        <OrderForm
         item={input}
         handleChange={handleChange}
         handleSubmit={handleSubmit}

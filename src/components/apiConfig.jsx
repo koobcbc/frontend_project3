@@ -2,7 +2,7 @@ let apiUrl
 const apiUrls = {
     //deployed api url
   production: 'https://sei-items-api.herokuapp.com/api',
-  development: 'http://localhost:3000/'
+  development: 'http://localhost:3000/api'
 }
 
 if (window.location.hostname === 'localhost') {
