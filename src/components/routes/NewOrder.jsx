@@ -7,7 +7,7 @@ import apiUrl from '../../apiConfig'
 
 const NewOrder = (props) => {
     console.log('ItemCreate props', props)
-  const [input, setInput] = useState({ title: "", link: "" });
+  const [input, setInput] = useState({ flavor: "", holder: "", toppings: "", size: "", price: "" });
   const [item, setItem] = useState(null);
 
   const handleChange = (event) => {
@@ -24,13 +24,13 @@ const NewOrder = (props) => {
 
     console.log("handleSubmit");
     axios({
-      url: `${apiUrl}/items`,
+      url: `${apiUrl}/orders`,
       method: "POST",
       data: input,
     })
       .then((res) => {
           setItem({ createdItem: res.data.item })
-          props.history.push('/items')
+          props.history.push('/orders')
         })
       .catch(console.error);
   };
