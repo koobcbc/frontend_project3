@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState }from 'react'
 import { Link } from 'react-router-dom'
 
-const OrderForm = ({ order, handleSubmit, handleChange, cancelPath }) => {
-    console.log('OrderForm', order)
-  
+const OrderForm = ({ order, handleSubmit, handleChange, cancelPath, handleSizeSelect, handleSelect }) => {
+
+
+
   return (
     <form onSubmit={handleSubmit}>
         <label>Name</label>
@@ -14,37 +15,42 @@ const OrderForm = ({ order, handleSubmit, handleChange, cancelPath }) => {
         onChange={handleChange}
         />
 
-        <label>Type</label>
-        <input
-        placeholder='Icecream or Milkshake?'
-        value={order.type}
-        name="type"
-        onChange={handleChange}
-        />
 
         <label>Flavor</label>
-        <input
-        placeholder='Flavor'
+        <select
         value={order.flavor}
         name="flavor"
-        onChange={handleChange}
-        />
+        onChange={handleSelect}
+        >
+        <option>Vanilla</option>
+        <option>Chocolate</option>
+        <option>Strawberry</option>
+        <option>Pistachio</option>
+        <option>Cookies and Cream</option>
+        <option>Rocky Road</option>
+        </select>
+
+        <label>Toppings</label>
+        <select value={order.toppings} name="toppings" onChange={handleSelect}>
+        <option>Sprinkles</option>
+        <option>Oreos</option>
+        <option>Chocolate Syrup</option>
+        </select>
 
         <label>Size</label>
-        <input
-        placeholder='Size'
-        value={order.size}
-        name="size"
-        onChange={handleChange}
-        />
+        <select value={order.size} name="size" onChange={handleSizeSelect}>
+          <option>small</option>
+          <option>medium</option>
+          <option>large</option>
+        </select>
+
 
         <label>Holder</label>
-        <input
-        placeholder='Holder'
-        value={order.holder}
-        name="holder"
-        onChange={handleChange}
-        />
+        <select value={order.holder} name="holder" onChange={handleSelect}>
+          <option>cone</option>
+          <option>bowl</option>
+        </select>
+
 
         <button type="submit">Submit</button>
         <Link to={cancelPath}>

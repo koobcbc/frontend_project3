@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Layout from '../shared/Layout'
-import apiUrl from '../apiConfig'
+
+import apiUrl from  "../apiConfig"
+
 
 const PastOrders = (props) => {
   console.log('PastOrder')
@@ -26,6 +28,7 @@ const PastOrders = (props) => {
   useEffect(() => {
     const makeAPICallMS = async () => {
       try {
+        const response = await axios(`${apiUrl}/ice-cream`);
         const response = await axios(`${apiUrl}/milkshakes`);
         console.log("Orders - useEffect - response", response);
         setMSOrders(response.data.milkshake);

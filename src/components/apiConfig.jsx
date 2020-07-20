@@ -1,7 +1,7 @@
 let apiUrl
 const apiUrls = {
     //deployed api url
-  production: 'https://sei-items-api.herokuapp.com/api',
+  production: 'https://infinite-oasis-13683.herokuapp.com/api',
   development: 'http://localhost:3000/api'
 }
 
