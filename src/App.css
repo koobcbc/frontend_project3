@@ -42,3 +42,9 @@ nav {
   display: flex;
   justify-content: space-evenly;
 }
+
+.input{
+  margin: auto;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
