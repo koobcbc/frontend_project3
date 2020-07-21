@@ -7,7 +7,7 @@ import apiUrl from "../apiConfig";
 
 const OrderIceCream = (props) => {
    // console.log('ItemCreate props', props)
-  const [input, setInput] = useState({ flavor: "", holder : "", toppings: "", size: "", price:"" , paid:false });
+  const [input, setInput] = useState({ flavor: "", holder : "", topping1: "", topping2: "", topping3: "", size: "", price:"" , paid:false });
   const [item, setItem] = useState(null);
 
 const handleSelect = event => {

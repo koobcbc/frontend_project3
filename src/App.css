@@ -48,3 +48,11 @@ nav {
   margin-top: 7px;
   margin-bottom: 7px;
 }
+
+select {
+  width: 200px;
+}
+
+input {
+  width:200px;
+}
