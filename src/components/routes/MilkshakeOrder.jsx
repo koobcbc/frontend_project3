@@ -76,7 +76,7 @@ const MilkshakeOrder = (props) =>  {
       return (
         <>
           <h3>paid/unpaid is updated</h3> 
-          <Link to={`/past-orders`}>Back to Past Orders</Link>
+          <Link to={`/past-orders/milkshake/${props.match.params.id}`}>Back to Past Orders</Link>
         </>
         )}
 
@@ -86,6 +86,7 @@ const MilkshakeOrder = (props) =>  {
                     <h4>Order for {order.name}</h4> 
                     <h4>Flavor: {order.flavor}</h4>
                     <h4>Toppings: {order.toppings}</h4>
+                    <h4>Paid: {order.paid ? 'True' : 'False'}</h4>
                     <button onClick={destroyMS}>Delete Order</button>
                     <form onSubmit={handleSubmit}><button type='submit'>Paid / Unpaid</button></form>
                     <Link to="/past-orders">Back to all orders</Link>

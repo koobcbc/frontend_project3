@@ -25,16 +25,18 @@ const IcecreamOrder = (props) =>  {
     makeAPICall()
   }, [])
 
-  useEffect(() => {
-    const paidToggle = () => {
-      let tempOrder = {...order}
+  let tempOrder = {...order}
       console.log('tempOrder - before',tempOrder)
-      if (tempOrder.paid === false){
-        tempOrder.paid = true
-      } else {
+      if (tempOrder.paid){
         tempOrder.paid = false
+      } else {
+        tempOrder.paid = true
       }
       console.log('tempOrder - after',tempOrder)
+
+
+  useEffect(() => {
+    const paidToggle = () => {
       setUpdatedOrder(tempOrder);
   }
   paidToggle()
@@ -64,15 +66,15 @@ const IcecreamOrder = (props) =>  {
 
     const handleSubmit = (event) => {
       event.preventDefault()
-
-      axios.put(`${apiUrl}/icecream/${props.match.params.id}`, updatedOrder)
-
-      // axios({
-      //     url: `${apiUrl}/icecream/${props.match.params.id}`,
-      //     method: 'PUT',
-      //     data: updatedOrder
-      // })
+      console.log('handleSubmit - updatedOrder (before)', updatedOrder)
+      axios({
+          url: `${apiUrl}/icecream/${props.match.params.id}`,
+          method: 'PUT',
+          data: updatedOrder
+      })
           .then(() => setIsUpdated(true))
+          .then(console.log(updatedOrder))
+          .then(console.log('updated by get method!'))
           .catch(console.error)
   }
 
