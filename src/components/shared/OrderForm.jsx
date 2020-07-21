@@ -12,7 +12,7 @@ const OrderForm = ({ order, handleSubmit, handleChange, cancelPath, handleSizeSe
         <div className="input">
         <label>Name</label><br/>
         <input
-        placeholder='Name of the Order'
+        placeholder='Your name'
         value={order.name}
         name="name"
         onChange={handleChange}
@@ -27,12 +27,14 @@ const OrderForm = ({ order, handleSubmit, handleChange, cancelPath, handleSizeSe
         name="flavor"
         onChange={handleSelect}
         >
-        <option>Vanilla</option>
         <option>Chocolate</option>
+        <option>Vanilla</option>
         <option>Strawberry</option>
-        <option>Pistachio</option>
         <option>Cookies and Cream</option>
-        <option>Rocky Road</option>
+        <option>Mint Chocolate Chip</option>
+        <option>Pistachio</option>
+        <option>Birthday Cake</option>
+        <option>Buttered Pecan</option>
         </select>
         </div>
 
@@ -42,9 +44,40 @@ const OrderForm = ({ order, handleSubmit, handleChange, cancelPath, handleSizeSe
         <select value={order.toppings} name="toppings" onChange={handleSelect}>
         <option>Sprinkles</option>
         <option>Oreos</option>
-        <option>Chocolate Syrup</option>
+        <option>Gummy Bears</option>
+        <option>Hot Fudge</option>
+        <option>Chocolate Sauce</option>
+        <option>Pecans</option>
         </select>
         </div>
+
+        {path==="/order-icecream" ? 
+        <div className="input">
+        <label>Toppings 2</label><br/>
+        <select value={order.toppings} name="toppings" onChange={handleSelect}>
+        <option>Sprinkles</option>
+        <option>Oreos</option>
+        <option>Gummy Bears</option>
+        <option>Hot Fudge</option>
+        <option>Chocolate Sauce</option>
+        <option>Pecans</option>
+        </select>
+        </div>
+        : null }
+
+{path==="/order-icecream" ? 
+        <div className="input">
+        <label>Toppings 3</label><br/>
+        <select value={order.toppings} name="toppings" onChange={handleSelect}>
+        <option>Sprinkles</option>
+        <option>Oreos</option>
+        <option>Gummy Bears</option>
+        <option>Hot Fudge</option>
+        <option>Chocolate Sauce</option>
+        <option>Pecans</option>
+        </select>
+        </div>
+        : null }
 
 
         <div className="input">
@@ -61,7 +94,9 @@ const OrderForm = ({ order, handleSubmit, handleChange, cancelPath, handleSizeSe
         <label>Holder</label><br/>
         <select value={order.holder} name="holder" onChange={handleSelect}>
           <option>cone</option>
+          <option>cup</option>
           <option>bowl</option>
+          <option>waffle cone</option>
         </select>
         </div>
         : null }
