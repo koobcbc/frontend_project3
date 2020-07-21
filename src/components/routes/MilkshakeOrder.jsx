@@ -22,6 +22,21 @@ const MilkshakeOrder = (props) =>  {
     makeAPICall()
   }, [])
 
+  useEffect(() => {
+    const paidToggle = () => {
+      let tempOrder = {...order}
+      console.log('tempOrder - before',tempOrder)
+      if (tempOrder.paid === false){
+        tempOrder.paid = true
+      } else {
+        tempOrder.paid = false
+      }
+      console.log('tempOrder - after',tempOrder)
+      setUpdatedOrder(tempOrder);
+  }
+  paidToggle()
+  },[order])
+
   const destroyMS = async () => {
     const response = await axios(
         {
@@ -41,6 +56,27 @@ const MilkshakeOrder = (props) =>  {
         { pathname: '/', state: { msg: 'Item succesfully deleted!' } }
       } />
     }
+
+    const handleSubmit = (event) => {
+        event.preventDefault()
+  
+        axios.put(`${apiUrl}/milkshakes/${props.match.params.id}`, updatedOrder)
+            .then(() => setIsUpdated(true))
+            .catch(console.error)
+    }
+  
+    if(!isUpdated) {
+      console.log('not updated yet')
+    }
+  
+    if (isUpdated) {
+      console.log('paid/unpaid is updated')
+      return (
+        <>
+          <h3>paid/unpaid is updated</h3> 
+          <Link to={`/past-orders`}>Back to Past Orders</Link>
+        </>
+        )}
 
     return (
         <Layout>
