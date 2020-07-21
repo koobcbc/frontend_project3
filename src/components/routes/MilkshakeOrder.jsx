@@ -8,6 +8,8 @@ import apiUrl from '../apiConfig'
 const MilkshakeOrder = (props) =>  {
     const [order,setOrder] = useState(null)
     const [isDeleted,setIsDeleted] = useState(false)
+    const [updatedOrder, setUpdatedOrder] = useState({})
+    const [isUpdated,setIsUpdated] = useState(false)
 
   useEffect(() => {
     const makeAPICall = async () => {
@@ -85,9 +87,7 @@ const MilkshakeOrder = (props) =>  {
                     <h4>Flavor: {order.flavor}</h4>
                     <h4>Toppings: {order.toppings}</h4>
                     <button onClick={destroyMS}>Delete Order</button>
-                    <Link to={`/past-orders/milkshake/${props.match.params.id}/edit`}>
-                        <button>Edit Order</button>
-                    </Link>
+                    <form onSubmit={handleSubmit}><button type='submit'>Paid / Unpaid</button></form>
                     <Link to="/past-orders">Back to all orders</Link>
             </div>
         </Layout>
