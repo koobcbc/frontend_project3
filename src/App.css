@@ -45,8 +45,8 @@ nav {
 
 .input{
   margin: auto;
-  margin-top: 7px;
-  margin-bottom: 7px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 select {
@@ -55,4 +55,8 @@ select {
 
 input {
   width:200px;
+}
+
+.btn {
+  margin-left: 5px;
 }

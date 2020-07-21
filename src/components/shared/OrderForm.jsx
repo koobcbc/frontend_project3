@@ -1,6 +1,7 @@
 import React, { useState }from 'react'
 import { Link } from 'react-router-dom'
 import '../../App.css'
+import { Button } from 'react-bootstrap'
 
 const OrderForm = ({ order, handleSubmit, handleChange, cancelPath, handleSizeSelect, handleSelect, path }) => {
 
@@ -102,9 +103,9 @@ const OrderForm = ({ order, handleSubmit, handleChange, cancelPath, handleSizeSe
         : null }
 
 
-        <button type="submit">Submit</button>
+        <Button variant="primary"type="submit">Submit</Button>
         <Link to={cancelPath}>
-        <button>Cancel</button>
+        <Button variant="primary">Cancel</Button>
         </Link>
     </form>
     )
