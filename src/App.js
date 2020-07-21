@@ -10,6 +10,7 @@ import MilkshakeOrder from './components/routes/MilkshakeOrder'
 import About from './components/routes/About'
 import OrderIceCream from './components/routes/OrderIceCream';
 import OrderMilkshake from './components/routes/OrderMilkshake';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = props => {
   return(
