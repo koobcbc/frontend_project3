@@ -24,7 +24,7 @@ const About = props => {
                 <h5>Holder</h5>
                 <p>Cup, Bowl, Cone and Waffle Cone</p>
                 <h5>Size</h5>
-                <p>Small, Medium, Large and Extra Large</p>
+                <p>Small, Medium and Large</p>
             </div>
             <div className="team">
                 <h3>Team</h3>
@@ -36,7 +36,7 @@ const About = props => {
                     </div>
                 </div>
                 <div className="team-member">
-                    <div className="imgcontainer"><img className="profile" src="https://i.imgur.com/0lzMdEW.png"/></div>
+                    <div className="imgcontainer"><img className="profile" src="https://i.imgur.com/MXPp02j.png"/></div>
                     <div className="bio">
                         <h5>Alexander Brown </h5>
                         <p>My main contribution was on the backend by helping create most of the models and seed data. I assisted my teammates by making needed updates on the backend throughout our project. I also helped with the front end menu on the “About” page. My passions are music, any sport that requires a board, and building objects whether they be music, cars, motorcycles, computers or web applications.</p>
