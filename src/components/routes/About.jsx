@@ -25,6 +25,10 @@ const About = props => {
                 <h5>Size</h5>
                 <p>Small, Medium, Large and Extra Large</p>
             </div>
+            <div>
+                <h3>Team</h3>
+                
+            </div>
         </Layout>
   )}
   
