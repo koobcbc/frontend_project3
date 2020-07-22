@@ -7,7 +7,7 @@ import apiUrl from "../apiConfig";
 
 const OrderIceCream = (props) => {
    // console.log('ItemCreate props', props)
-  const [input, setInput] = useState({ flavor: "", toppings: "", size: "", price:"" , paid:false });
+  const [input, setInput] = useState({ flavor: "", topping1: "", topping2: "", topping3: "", size: "", price:"" , paid:false });
   const [item, setItem] = useState(null);
 
 const handleSelect = event => {
@@ -59,7 +59,7 @@ const handleSizeSelect = event =>{
     })
       .then((res) => {
           setItem({ createdItem: res.data.item })
-          props.history.push('/milkshakes')
+          props.history.push('/new-order')
         })
       .catch(console.error);
   };
