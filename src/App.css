@@ -6,16 +6,6 @@
   min-height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color: #282c34;
@@ -32,28 +22,39 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.headerDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerDiv .h1Link {
+  margin: 0;
+  padding: 30px 13px;
+  text-decoration: none;
 }
 
 h1 {
-  padding: 10px;
+  display: inline;
 }
-
 
 nav {
   margin: auto;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
+  background-color: #9dc5faaf;
+  border: 1px solid #9dc5fada;
 }
 
 nav a {
-  padding: 10px;
+  padding: 25px 10px;
+  align-self: center;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #9dd0fa;
 }
 
 .input{
@@ -78,12 +79,41 @@ li {
   list-style: none;
 }
 
+/* NEW ORDER PAGE */
+.orderform {
+  padding-top: 30px;
+}
+
+.orderform a {
+  padding: 10px;
+  text-decoration: none;
+}
+
+/* LAYOUT */
+.layout {
+  min-height: 100vh;
+}
+
+.backgroundImg {
+  background-color: #9dc5fa;
+  background-image: url('https://i.imgur.com/yqLyQfs.png');
+  background-position: center;
+  background-size: 160px;
+  background-repeat: repeat;
+  height: 72vh;
+  display: flex;
+  align-items: center;
+}
+
 /* HOME PAGE */
 .homeText {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+  padding: 30px;
+  margin: 40px;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.692);
 }
 
 .homeText h4 {
@@ -92,18 +122,55 @@ li {
   text-align: center;
 }
 
-/* NEW ORDER PAGE */
-.orderform {
-  padding-top: 30px;
+.about {
+  padding: 30px;
 }
 
-/* LAYOUT */
-.layout {
-  min-height: 100vh;
+.footerDiv {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  padding: 13px;
+  position: relative;
+  left: 0px;
+  bottom: 0px;
+  width: 100%
 }
 
 .footer {
   font-size: 10px;
-  position: absolute;
-  bottom: 0px;
+  margin: 0;
+}
+
+/* ----------------- */
+/* ----------------- */
+/* RESPONSIVE DESIGN */
+/* ----------------- */
+/* ----------------- */
+
+/* ------ */
+/* DESKTOP */
+/* ------- */
+
+@media only screen and (min-width:1000px) {
+  .backgroundImg {
+    background-image: url('https://i.imgur.com/DBsiFBl.jpeg');
+    background-size: 100vw;
+    background-position: center;
+  }
+
+}
+
+/*  ----- */
+/* TABLET */
+/* ------- */
+@media only screen and (min-width:754px) {
+
+  .backgroundImg {
+    background-image: url('https://i.imgur.com/DBsiFBl.jpeg');
+    background-size: 100vw;
+    background-position: center;
+  }
+
+
 }
