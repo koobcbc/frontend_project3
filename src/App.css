@@ -5,6 +5,14 @@
   font-family: 'Montserrat', sans-serif;
   min-height: 100vh;
   overflow-y: scroll;
+ padding: 10px;
+}
+
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
 
@@ -109,6 +117,19 @@ li {
   justify-content: center;
 }
 
+.layout {
+  height: 100vh;
+}
+
+.orderform {
+  margin: auto;
+  height: 50%;
+}
+
+.choices {
+  margin-top: 15%;
+}
+
 /* HOME PAGE */
 .homeText {
   display: flex;
@@ -203,13 +224,9 @@ li {
 
 
 .profile {
-  height: 150px;
+  width: 150px;
 }
 
-.imgcontainer {
-  margin-left: 20px;
-
-}
 
 .about {
   margin-top: 15px;
