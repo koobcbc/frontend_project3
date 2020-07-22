@@ -43,10 +43,10 @@ const About = props => {
                     </div>
                 </div>
                 <div className="team-member">
-                    <img className="profile" src="https://i.imgur.com/hw7xXRF.jpg"/>
+                    <img className="profile" src="https://i.imgur.com/hcyfcCt.jpg"/>
                     <div className="bio">
                         <h5>Beechui (Katy) Koo</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dicta dignissimos rem repellat labore est? Dolor nisi ipsa quisquam doloribus vel, repudiandae similique ab, consequuntur nesciunt unde aut. Voluptas, earum.</p>
+                        <p>My contribution to this project includes creating the wireframes of the app, building out the past orders tab including the functionality of deleting and updating individual orders. I also contributed to the styling of the page and the responsiveness. My passion lies in science and technology, and I like catching up the news for our fast-paced developments in the world. Besides my scientific interest, I enjoy swimming, biking, and playing sports including basketball and badminton.</p>
                     </div>
                 </div>
                 <div className="team-member">
