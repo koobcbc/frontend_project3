@@ -82,7 +82,9 @@ li {
 
 /* NEW ORDER PAGE */
 .orderform {
-  padding-top: 30px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.692);
+  ;
 }
 
 .orderform a {
@@ -124,8 +126,30 @@ li {
   text-align: center;
 }
 
-.about {
+.about, .menu, .team {
   padding: 30px;
+  background-color: rgba(255, 255, 255, 0.829);
+  margin: 15px;
+}
+
+.pastOrder {
+  background-color: rgba(255, 255, 255, 0.829);
+  padding: 20px 50px;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr;
+  margin: 20px;
+}
+
+.pastOrder h4 {
+  grid-area: "h4"
+}
+
+.pastOrder .iceCreamOrder {
+  grid-area: "ICorder"
+}
+
+.pastOrder .milkshakeOrder {
+  grid-area: "MSorder"
 }
 
 .footerDiv {
