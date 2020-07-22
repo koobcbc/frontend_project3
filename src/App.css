@@ -101,9 +101,10 @@ li {
   background-position: center;
   background-size: 160px;
   background-repeat: repeat;
-  height: 72vh;
+  min-height: 72vh;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 /* HOME PAGE */
@@ -155,8 +156,8 @@ li {
 
 @media only screen and (min-width:1000px) {
   .backgroundImg {
-    background-image: url('https://i.imgur.com/DBsiFBl.jpeg');
-    background-size: 100vw;
+    /* background-image: url('https://i.imgur.com/DBsiFBl.jpeg'); */
+    background-size: 20vw;
     background-position: center;
   }
 
@@ -168,8 +169,8 @@ li {
 @media only screen and (min-width:754px) {
 
   .backgroundImg {
-    background-image: url('https://i.imgur.com/DBsiFBl.jpeg');
-    background-size: 100vw;
+    /* background-image: url('https://i.imgur.com/DBsiFBl.jpeg'); */
+    background-size: 20vw;
     background-position: center;
   }
 
