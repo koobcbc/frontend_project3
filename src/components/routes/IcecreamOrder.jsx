@@ -95,13 +95,15 @@ const IcecreamOrder = (props) =>  {
 
     return (
         <Layout>
-                <div className="icecreamOrder">
-                    <h4>Order for {order.name}</h4> 
-                    <h4>Flavor: {order.flavor}</h4>
-                    <h4>Toppings: {order.toppings}</h4>
-                    <h4>Paid: {order.paid ? 'True' : 'False'}</h4>
-                    <button onClick={destroyIC}>Delete Order</button>
-                    <form onSubmit={handleSubmit}><button type='submit'>Paid / Unpaid</button></form>
+                <div className="individualOrder">
+                    <h2>Order for {order.name}</h2> 
+                    <h5>Flavor: {order.flavor}</h5>
+                    {order.topping1 ? <h5>Topping 1: {order.topping1}</h5> : <h5>Topping 1: N/A</h5>}
+                    {order.topping2 ? <h5>Topping 2: {order.topping2}</h5> : <h5>Topping 2: N/A</h5>}
+                    {order.topping3 ? <h5>Topping 3: {order.topping3}</h5> : <h5>Topping 3: N/A</h5>}                    
+                    <h5>Paid: {order.paid ? 'True' : 'False'}</h5>
+                    <button onClick={destroyIC} className="btn btn-primary">Delete Order</button>
+                    <form onSubmit={handleSubmit}><button type='submit' className="btn btn-primary">Paid / Unpaid</button></form>
                     <Link to="/past-orders">Back to all orders</Link>
                 </div>
         

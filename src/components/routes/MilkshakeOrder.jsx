@@ -82,11 +82,13 @@ const MilkshakeOrder = (props) =>  {
 
     return (
         <Layout>
-            <div className="milkshakeOrder">
-                    <h4>Order for {order.name}</h4> 
-                    <h4>Flavor: {order.flavor}</h4>
-                    <h4>Toppings: {order.toppings}</h4>
-                    <h4>Paid: {order.paid ? 'True' : 'False'}</h4>
+            <div className="individualOrder">
+                    <h2>Order for {order.name}</h2> 
+                    <h5>Flavor: {order.flavor}</h5>
+                    {order.topping1 ? <h5>Topping 1: {order.topping1}</h5> : <h5>Topping 1: N/A</h5>}
+                    {order.topping2 ? <h5>Topping 2: {order.topping2}</h5> : <h5>Topping 2: N/A</h5>}
+                    {order.topping3 ? <h5>Topping 3: {order.topping3}</h5> : <h5>Topping 3: N/A</h5>}                    
+                    <h5>Paid: {order.paid ? 'True' : 'False'}</h5>
                     <button onClick={destroyMS}>Delete Order</button>
                     <form onSubmit={handleSubmit}><button type='submit'>Paid / Unpaid</button></form>
                     <Link to="/past-orders">Back to all orders</Link>

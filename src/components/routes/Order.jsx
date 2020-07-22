@@ -50,7 +50,9 @@ const Order = (props) =>  {
       <Layout>
         <h4>Order for {order.name}</h4> 
         <h4>Flavor: {order.flavor}</h4>
-        <h4>Toppings: {order.toppings}</h4>
+        {order.topping1 ? <h4>Topping 1: {order.topping1}</h4> : <h4>Topping 1: N/A</h4>}
+        {order.topping2 ? <h4>Topping 2: {order.topping2}</h4> : <h4>Topping 2: N/A</h4>}
+        {order.topping3 ? <h4>Topping 3: {order.topping3}</h4> : <h4>Topping 3: N/A</h4>}
         <button onClick={destroy}>Delete Order</button>
         <Link to={`/past-orders/${props.match.params.id}/edit`}>
           <button>Edit Order</button>

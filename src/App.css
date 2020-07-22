@@ -155,22 +155,31 @@ li {
 
 .pastOrder {
   background-color: rgba(255, 255, 255, 0.829);
-  padding: 20px 50px;
+  padding: 20px 40px;
   display: grid;
   grid-template-columns: 0.5fr 1fr 1fr;
   margin: 20px;
 }
 
 .pastOrder h4 {
-  grid-area: "h4"
+  grid-area: "h4";
+  padding: 10px;
+  padding-right: 20px;
 }
 
 .pastOrder .iceCreamOrder {
-  grid-area: "ICorder"
+  grid-area: "ICorder";
+  padding: 10px;
 }
 
 .pastOrder .milkshakeOrder {
-  grid-area: "MSorder"
+  grid-area: "MSorder";
+  padding: 10px;
+}
+
+.individualOrder {
+  background-color: rgba(255, 255, 255, 0.829);
+  padding: 20px;
 }
 
 .footerDiv {
@@ -254,6 +263,8 @@ li {
 .team-member {
   display: flex;
   flex-direction: row;
+  min-height: 225px;
+  align-items: center;
 }
 
 .bio {

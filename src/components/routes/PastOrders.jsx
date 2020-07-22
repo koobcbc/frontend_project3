@@ -40,25 +40,28 @@ const PastOrders = (props) => {
 
   const ICordersArr = ICorders.map((order) => (
     <li key={order._id}>
-      <Link to={`/past-orders/icecream/${order._id}`}>Order for {order.name}</Link>
-      <h4>Icecream Order</h4>
-      <h5>Flavor: {order.flavor}</h5>
-      <h5>Toppings: {order.toppings}</h5>
-      <h5>Size: {order.size}</h5>
-      <h5>Holder: {order.holder}</h5>
-      <h5>Price: {order.price}</h5>
-
+        <Link to={`/past-orders/icecream/${order._id}`}>Order for {order.name}</Link>
+        <h4>Icecream Order</h4>
+        <h5>Flavor: {order.flavor}</h5>
+        {order.topping1 ? <h5>Topping 1: {order.topping1}</h5> : <h5>Topping 1: N/A</h5>}
+        {order.topping2 ? <h5>Topping 2: {order.topping2}</h5> : <h5>Topping 2: N/A</h5>}
+        {order.topping3 ? <h5>Topping 3: {order.topping3}</h5> : <h5>Topping 3: N/A</h5>}      
+        <h5>Size: {order.size}</h5>
+        <h5>Holder: {order.holder}</h5>
+        <h5>Price: {order.price}</h5>
     </li>
   ));
 
   const MSordersArr = MSorders.map((order) => (
     <li key={order._id}>
-      <Link to={`/past-orders/milkshake/${order._id}`}>Order for {order.name}</Link>
-      <h4>Milkshake Order</h4>
-      <h5>Flavor: {order.flavor}</h5>
-      <h5>Toppings: {order.toppings}</h5>
-      <h5>Size: {order.size}</h5>
-      <h5>Price: {order.price}</h5>
+        <Link to={`/past-orders/milkshake/${order._id}`}>Order for {order.name}</Link>
+        <h4>Milkshake Order</h4>
+        <h5>Flavor: {order.flavor}</h5>
+        {order.topping1 ? <h5>Topping 1: {order.topping1}</h5> : <h5>Topping 1: N/A</h5>}
+        {order.topping2 ? <h5>Topping 2: {order.topping2}</h5> : <h5>Topping 2: N/A</h5>}
+        {order.topping3 ? <h5>Topping 3: {order.topping3}</h5> : <h5>Topping 3: N/A</h5>}
+        <h5>Size: {order.size}</h5>
+        <h5>Price: {order.price}</h5>
     </li>
   ));
 
