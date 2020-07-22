@@ -9,7 +9,7 @@ const Layout = props => (
         <Header />
         <Nav /> 
         {props.children}
-        <Footer />
+        {/* <Footer /> */}
 
     </div>
 )
