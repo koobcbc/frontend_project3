@@ -41,8 +41,8 @@ const OrderForm = ({ order, handleSubmit, handleChange, cancelPath, handleSizeSe
 
 
         <div className="input">
-        <label>Toppings</label><br/>
-        <select value={order.toppings} name="toppings" onChange={handleSelect}>
+        <label>Topping</label><br/>
+        <select value={order.toppings} name="topping1" onChange={handleSelect}>
         <option>Sprinkles</option>
         <option>Oreos</option>
         <option>Gummy Bears</option>
@@ -54,8 +54,8 @@ const OrderForm = ({ order, handleSubmit, handleChange, cancelPath, handleSizeSe
 
         {path==="/order-icecream" ? 
         <div className="input">
-        <label>Toppings 2</label><br/>
-        <select value={order.toppings} name="toppings" onChange={handleSelect}>
+        <label>Topping 2</label><br/>
+        <select value={order.toppings} name="topping2" onChange={handleSelect}>
         <option>Sprinkles</option>
         <option>Oreos</option>
         <option>Gummy Bears</option>
@@ -68,8 +68,8 @@ const OrderForm = ({ order, handleSubmit, handleChange, cancelPath, handleSizeSe
 
 {path==="/order-icecream" ? 
         <div className="input">
-        <label>Toppings 3</label><br/>
-        <select value={order.toppings} name="toppings" onChange={handleSelect}>
+        <label>Topping 3</label><br/>
+        <select value={order.toppings} name="topping3" onChange={handleSelect}>
         <option>Sprinkles</option>
         <option>Oreos</option>
         <option>Gummy Bears</option>
