@@ -65,9 +65,11 @@ const PastOrders = (props) => {
   return (
     <>
     <Layout>
-      <h4>PAST ORDERS</h4>
-      <ul>{ICordersArr}</ul>
-      <ul>{MSordersArr}</ul>
+        <div className="pastOrder">
+        <h4>PAST ORDERS</h4>
+            <ul className="iceCreamOrder">{ICordersArr}</ul>
+            <ul className="milkshakeOrder">{MSordersArr}</ul>
+        </div>
     </Layout>
     </>
   );

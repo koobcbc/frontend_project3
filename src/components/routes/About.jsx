@@ -14,7 +14,7 @@ const About = props => {
                 placed an order you can check your past order by looking for your name and your order will be displayed.
             </p>
             </div>
-            <div>
+            <div className="menu">
                 <h4>Menu</h4>
                 <h5>Flavors</h5>
                 <p>Chocolate, Vanilla, Strawberry, Cookies N Cream, Mint Chocolate Chip,

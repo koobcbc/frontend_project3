@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { Route, Switch, withRouter } from 'react-router-dom'
 import Home from './components/routes/Home'
@@ -10,7 +11,6 @@ import MilkshakeOrder from './components/routes/MilkshakeOrder'
 import About from './components/routes/About'
 import OrderIceCream from './components/routes/OrderIceCream';
 import OrderMilkshake from './components/routes/OrderMilkshake';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = props => {
   return(
