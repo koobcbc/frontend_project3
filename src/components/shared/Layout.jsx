@@ -11,8 +11,7 @@ const Layout = props => (
         <div className="backgroundImg">
         {props.children}
         </div>
-        <Footer />
-
+        <Footer />        
     </div>
 )
 
