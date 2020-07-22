@@ -5,7 +5,7 @@ import Header from './Header';
 
 
 const Layout = props => (
-    <div>
+    <div className="layout">
         <Header />
         <Nav /> 
         {props.children}

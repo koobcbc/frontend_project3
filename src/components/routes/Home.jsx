@@ -5,7 +5,7 @@ import Layout from '../shared/Layout'
 const Home = props => {
     return(
         <Layout>
-            <div>
+            <div className="homeText">
                 <h4>PLACE AN ORDER TO GET YOUR ICECREAM READY FOR PICKUP</h4>
             </div>
         </Layout>
