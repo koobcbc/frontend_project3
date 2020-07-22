@@ -57,7 +57,7 @@ const handleSizeSelect = event =>{
     })
       .then((res) => {
           setItem({ createdItem: res.data.item })
-          props.history.push('/icecream')
+          props.history.push('/new-order')
         })
       .catch(console.error);
   };
