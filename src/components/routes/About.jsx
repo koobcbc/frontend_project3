@@ -50,7 +50,7 @@ const About = props => {
                     </div>
                 </div>
                 <div className="team-member">
-                    <img className="profile" src="https://imgur.com/hVfQyxM.jpg" />
+                    <img className="profile" src="https://i.imgur.com/ssyv4jd.jpg" />
                     <div className="bio">
                         <h5>David Swanberg</h5>
                         <p>My contribution to this project included planning and building out the React components, specifically,functionality for the order forms. I also helped with some styling, and responsiveness, as well as general UI and debugging. I'm passionate about design and technology.. When I'm not coding I'm playin my guitar, listening to music, or hanging out with friends</p>
