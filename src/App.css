@@ -156,8 +156,8 @@ li {
 .pastOrder {
   background-color: rgba(255, 255, 255, 0.829);
   padding: 20px 40px;
-  display: grid;
-  grid-template-columns: 0.5fr 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   margin: 20px;
 }
 
@@ -226,6 +226,14 @@ li {
     /* background-image: url('https://i.imgur.com/DBsiFBl.jpeg'); */
     background-size: 20vw;
     background-position: center;
+  }
+
+  .pastOrder {
+    background-color: rgba(255, 255, 255, 0.829);
+    padding: 20px 40px;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr;
+    margin: 20px;
   }
 
 

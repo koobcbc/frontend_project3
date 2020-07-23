@@ -64,6 +64,7 @@ const handleSizeSelect = event =>{
 
   return (
     <Layout>
+        <div className="order-form-display">
         <h4>Order Ice Cream</h4>  
         <OrderForm
         order={input}
@@ -75,6 +76,7 @@ const handleSizeSelect = event =>{
         path={props.location.pathname}
         cancelPath="/"
         />
+        </div>
     </Layout>
   );
 };
