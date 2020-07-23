@@ -161,6 +161,10 @@ li {
   margin: 20px;
 }
 
+.order-name {
+  font-size: 24px;
+}
+
 .pastOrder h4 {
   grid-area: "h4";
   padding: 10px;
